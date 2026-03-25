@@ -1,0 +1,67 @@
+/* form->  */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+}
+
+#myForm {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    color: var(--text-color);
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-group{
+    flex: 1;
+}
+
+.errTxt {
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: var(--btnhvr-color);
+}

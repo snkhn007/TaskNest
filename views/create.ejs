@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task</title>
+    <link rel="stylesheet" href="/css/utils.css">
+    <link rel="stylesheet" href="/css/create.css">
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            <i class="bi bi-check2-square logo"> <b> TaskNet</b></i>
+        </div>
+        <div id="routes">
+            <a href="/" class="navItems">Home</a>
+            <a href="/addTask" class="navItems">Create Task</a>
+            <a href="/taskBoard" class="navItems">Task Board</a>
+        </div>
+        <div id="signIn">
+            <a href="signIn" class="navItems">Sign In</a>
+        </div>
+    </nav>
+
+    <main>
+        <div id="heading">
+            <h3>Plan Your Task</h3>
+        </div>
+        <div id="description">
+            <p id="text">Fill in the details below to organize and manage your task efficiently.</p>
+        </div>
+
+
+        <form id="myForm" action="/submit" method="post">
+            <div class="form-group">
+                <label for="title">Task Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter task title">
+                <p id="errTxtTitle" class="errTxt">Task title is required</p>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="category">Category / Subject</label>
+                    <input type="text" id="category" name="category" placeholder="e.g. Study, Work, Personal">
+                    <p id="errTxtCategory" class="errTxt">Please enter a category</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority" name="priority">
+                        <option value="">Select priority</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <p id="errTxtPriority" class="errTxt">Please select a priority</p>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">Due Date</label>
+                    <input type="date" name="date" id="date">
+                    <p id="errTxtDate" class="errTxt">Please choose a due date</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option value="">Select status</option>
+                        <option value="pending">Pending</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                    <p id="errTxtStatus" class="errTxt">Please select a status</p>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="pageDescription">Description</label>
+                <textarea name="description" id="pageDescription" rows="5" placeholder="Write a short description about the task.."></textarea>
+                <p id="errTxtDes" class="errTxt">Description is required</p>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn">
+                    Add Task
+                </button>
+            </div>
+        </form>
+    </main>
+    <!-- <script src="/js/form.js"></script>     -->
+</body>
+</html>

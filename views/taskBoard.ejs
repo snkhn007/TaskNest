@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task</title>
+    <link rel="stylesheet" href="/css/utils.css">
+    <link rel="stylesheet" href="/css/taskBoard.css">
+
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            <i class="bi bi-check2-square logo"> <b> TaskNet</b></i>
+        </div>
+        <div id="routes">
+            <a href="/" class="navItems">Home</a>
+            <a href="/addTask" class="navItems">Create Task</a>
+            <a href="/taskBoard" class="navItems">Task Board</a>
+        </div>
+        <div id="signIn">
+            <a href="signIn" class="navItems">Sign In</a>
+        </div>
+    </nav>
+
+    <main>
+        <div id="heading">
+            <h3>All Tasks</h3>
+        </div>
+        <div id="description">
+            <p id="text">View, manage, and track your tasks efficiently</p>
+        </div>
+        <div id="filter">
+            <a href="" class="filterItems">All Tasks</a>|
+            <a href="" class="filterItems">Pending</a>|
+            <a href="" class="filterItems">Completed</a>|
+            <a href="" class="filterItems">Overdue</a>
+        </div>
+
+        <div id="box">
+            <div class="task-card">
+                <div class="card-header">
+                    <h3 class="task-title">Finish DSA Practice</h3>
+                    <span class="priority high">High</span>
+                </div>
+    
+                <p class="task-category">Category: Study</p>
+    
+                <p class="task-desc">
+                    Solve at least 5 problems on arrays and revise previous concepts.
+                </p>
+    
+                <div class="card-footer">
+                    <span class="due-date">
+                        <i class="bi bi-calendar-event"></i> 25 Mar
+                    </span>
+    
+                    <span class="status pending">Pending</span>
+                </div>
+    
+                <div class="card-actions">
+                    <button class="btn edit">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn delete">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                    <button class="btn complete">
+                        <i class="bi bi-check2"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="task-card">
+                <div class="card-header">
+                    <h3 class="task-title">Finish DSA Practice</h3>
+                    <span class="priority high">High</span>
+                </div>
+    
+                <p class="task-category">Category: Study</p>
+    
+                <p class="task-desc">
+                    Solve at least 5 problems on arrays and revise previous concepts.
+                </p>
+    
+                <div class="card-footer">
+                    <span class="due-date">
+                        <i class="bi bi-calendar-event"></i> 25 Mar
+                    </span>
+    
+                    <span class="status pending">Pending</span>
+                </div>
+    
+                <div class="card-actions">
+                    <button class="btn edit">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn delete">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                    <button class="btn complete">
+                        <i class="bi bi-check2"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>   
+</body>
+</html>

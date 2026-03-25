@@ -1,0 +1,50 @@
+#routes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+        
+#heading{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 7px;
+    /* flex-wrap: wrap; */
+    font-size: 40px;
+    text-align: center;
+}
+h3{
+    color: var(--head-color);
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.tskbtn{
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: solid 0px;
+    background-color: var(--primary-color);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+}
+#btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tskbtn:hover {
+    background-color: var(--btnhvr-color);
+}
