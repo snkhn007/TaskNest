@@ -7,9 +7,11 @@ app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
 const{mainRouter} = require('./routes/mainRoutes');
-app.get('/', mainRouter);
+app.get('/',mainRouter);
 
 
 const {taskRouter} = require('./routes/taskRoutes');
