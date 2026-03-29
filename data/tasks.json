@@ -1,42 +1,82 @@
 [
   {
-    "title": "Express",
+    "title": "Complete Express Basics",
     "category": "Study",
     "priority": "medium",
     "date": "2026-03-31",
     "status": "pending",
-    "description": "Validation, Streams, cookie-parsing etc are left."
+    "description": "Finish validation, streams, cookies, and middleware concepts."
   },
   {
-    "title": "MongoDB Basics",
+    "title": "Learn MongoDB CRUD",
     "category": "Study",
     "priority": "high",
     "date": "2026-04-02",
-    "status": "pending",
-    "description": "Learn CRUD operations and connect MongoDB with Node.js."
+    "status": "in-progress",
+    "description": "Practice create, read, update, delete operations with Node.js."
   },
   {
-    "title": "TaskNest Filtering",
+    "title": "Implement TaskNest Filters",
     "category": "Project",
     "priority": "high",
     "date": "2026-04-01",
     "status": "pending",
-    "description": "Implement filtering for pending, completed, and overdue tasks."
+    "description": "Add filtering for pending, completed, and overdue tasks."
   },
   {
-    "title": "EJS Partials",
+    "title": "Setup EJS Partials",
     "category": "Study",
     "priority": "medium",
     "date": "2026-03-30",
-    "status": "pending",
-    "description": "Learn and implement reusable partials like header and footer."
+    "status": "completed",
+    "description": "Create reusable header, footer, and layout partials."
   },
   {
-    "title": "LeetCode Practice",
+    "title": "LeetCode Practice - Arrays",
     "category": "DSA",
     "priority": "low",
     "date": "2026-04-03",
     "status": "pending",
-    "description": "Solve 2 problems focusing on arrays and hashmaps."
+    "description": "Solve 2-3 array-based problems."
+  },
+  {
+    "title": "Fix TaskNest Bugs",
+    "category": "Project",
+    "priority": "high",
+    "date": "2026-03-29",
+    "status": "in-progress",
+    "description": "Debug filtering and rendering issues in task board."
+  },
+  {
+    "title": "UI Styling Improvements",
+    "category": "Project",
+    "priority": "low",
+    "date": "2026-04-05",
+    "status": "pending",
+    "description": "Improve layout, spacing, and responsiveness."
+  },
+  {
+    "title": "Review Java Concepts",
+    "category": "Study",
+    "priority": "medium",
+    "date": "2026-04-04",
+    "status": "completed",
+    "description": "Revise OOPs, interfaces, and inner classes."
+  },
+  {
+    "title": "Prepare Resume Update",
+    "category": "Career",
+    "priority": "high",
+    "date": "2026-04-06",
+    "status": "pending",
+    "description": "Add TaskNest project and GitHub links."
+  },
+  {
+    "title": "Test Overdue Logic",
+    "category": "Project",
+    "priority": "medium",
+    "date": "2026-03-20",
+    "status": "pending",
+    "description": "Ensure tasks with past dates are marked overdue."
   }
 ]

@@ -10,21 +10,34 @@
 </head>
 <body>
     <%- include('partials/nav') %>
-
+    <%let head = '', des = ''%>
+    <%if(status === 'pending'){%>
+        <%head = 'Pending Tasks'%>
+        <% des = 'Tasks that are yet to be started.' %>
+    <%}else if(status === 'completed'){%>
+        <%head = 'Completed Tasks'%>
+        <% des = 'Tasks you have successfully finished.' %>
+    <%}else if(status === 'in-progress'){%>
+        <%head = 'In Progress Tasks'%>
+        <% des = 'Tasks you are currently working on.' %>
+    <%}else{%>
+        <%head = 'All Tasks'%>
+        <% des = 'Overview of all your tasks.' %>
+    <%}%>
     <main>
         <div id="heading">
-            <h3>All Tasks</h3>
+            <h3><%=head%></h3>
         </div>
 
         <div id="description">
-            <p id="text">View, manage, and track your tasks efficiently</p>
+            <p id="text"><%=des%></p>
         </div>
 
         <div id="filter">
-            <a href="" class="filterItems">All Tasks</a> |
-            <a href="" class="filterItems">Pending</a> |
-            <a href="" class="filterItems">Completed</a> |
-            <a href="" class="filterItems">Overdue</a>
+            <a href="/taskBoard" class="filterItems">All Tasks</a> |
+            <a href="/taskBoard/pending" class="filterItems">Pending</a> |
+            <a href="/taskBoard/completed" class="filterItems">Completed</a> |
+            <a href="/taskBoard/in-progress" class="filterItems">Ongoing</a>
         </div>
 
         <div id="box">

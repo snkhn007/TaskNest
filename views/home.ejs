@@ -12,6 +12,7 @@
 </head>
 <body>
     <%- include('partials/nav')%>
+
     <main>
         <div id="heading">
             <h3>Think, plan, and track</h3>
@@ -22,9 +23,9 @@
             <div id="btns">
                 <a href="/addTask" id="create" class="tskbtn">Create Task</a>
                 <a href="/taskBoard" id="all" class="tskbtn">View All Tasks</a>
-                <a href="/taskBoard" id="pending" class="tskbtn">Pending</a>
-                <a href="/taskBoard" id="completed" class="tskbtn">Completed</a>
-                <a href="/taskBoard" id="overdue" class="tskbtn">Overdue</a>
+                <a href="/taskBoard/pending" id="pending" class="tskbtn">Pending</a>
+                <a href="/taskBoard/completed" id="completed" class="tskbtn">Completed</a>
+                <a href="/taskBoard/in-progress" id="overdue" class="tskbtn">Ongoing</a>
             </div>
         </div>
     </main>

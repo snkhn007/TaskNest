@@ -18,6 +18,7 @@ exports.Task = class Task{
         Task.fetchAll((data)=>{
             taskData = data;
             taskData.push(this);
+            // console.log('All Tasks: ', taskData);
             fs.writeFile(filePath, JSON.stringify(taskData, null, 2), (err) => {
                 if(err){
                     console.error("Error writing file:", err);
@@ -43,6 +44,19 @@ exports.Task = class Task{
                 }
             }
             callback(callbackData);
+        })
+    }
+
+    static filterByStatus(status, callback){
+        let reqtasks = [];
+        Task.fetchAll((alltasks)=>{
+            console.log("All Tasks: ",alltasks);
+            for(let i =0; i< alltasks.length; i++){
+                if(String(alltasks[i].status) === status){
+                    reqtasks.push(alltasks[i]);
+                }
+            }
+            callback(reqtasks);
         })
     }
 }

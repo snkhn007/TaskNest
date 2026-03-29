@@ -3,7 +3,7 @@ exports.addTask = (req, res)=>{
 };
 exports.taskBoard = (req, res)=>{
     Task.fetchAll((tasks)=>{
-        res.render('taskBoard', {title : 'Task Board', taskBoard : tasks});
+        res.render('taskBoard', {title : 'Task Board', taskBoard : tasks, status:'all'});
     })
 };
 const {Task} = require('../model/data');
@@ -17,3 +17,10 @@ exports.submit =  (req, res)=>{
 exports.signIn = (req, res)=>{
     res.render('signIn', {title : 'Sign In Page'});
 };
+
+exports.filter = (req, res)=>{
+    const status = req.params.status;
+    Task.filterByStatus(status, (tasks)=>{
+        res.render('taskBoard', {title : 'taskBoard', taskBoard : tasks, status:status});
+    })
+}
