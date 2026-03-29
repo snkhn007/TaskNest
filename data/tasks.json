@@ -1,1 +1,42 @@
-[{"title":"bfrydx","category":"Study","priority":"","date":"","status":"","description":""}]
+[
+  {
+    "title": "Express",
+    "category": "Study",
+    "priority": "medium",
+    "date": "2026-03-31",
+    "status": "pending",
+    "description": "Validation, Streams, cookie-parsing etc are left."
+  },
+  {
+    "title": "MongoDB Basics",
+    "category": "Study",
+    "priority": "high",
+    "date": "2026-04-02",
+    "status": "pending",
+    "description": "Learn CRUD operations and connect MongoDB with Node.js."
+  },
+  {
+    "title": "TaskNest Filtering",
+    "category": "Project",
+    "priority": "high",
+    "date": "2026-04-01",
+    "status": "pending",
+    "description": "Implement filtering for pending, completed, and overdue tasks."
+  },
+  {
+    "title": "EJS Partials",
+    "category": "Study",
+    "priority": "medium",
+    "date": "2026-03-30",
+    "status": "pending",
+    "description": "Learn and implement reusable partials like header and footer."
+  },
+  {
+    "title": "LeetCode Practice",
+    "category": "DSA",
+    "priority": "low",
+    "date": "2026-04-03",
+    "status": "pending",
+    "description": "Solve 2 problems focusing on arrays and hashmaps."
+  }
+]
