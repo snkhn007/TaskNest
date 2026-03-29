@@ -1,7 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-
-const filePath = path.join(__dirname, '../', 'data', 'tasks.json');
+const db = require('../utils/database');
 
 let taskData =[];
 exports.Task = class Task{
@@ -15,48 +12,40 @@ exports.Task = class Task{
     }
 
     save(){
-        Task.fetchAll((data)=>{
-            taskData = data;
-            taskData.push(this);
-            // console.log('All Tasks: ', taskData);
-            fs.writeFile(filePath, JSON.stringify(taskData, null, 2), (err) => {
-                if(err){
-                    console.error("Error writing file:", err);
-                } else {
-                    console.log("File saved successfully");
-                }
-            });
-        });
+        return db.execute(
+            'INSERT INTO tasks (title, category, priority, date, status, description) VALUES (?,?,?,?,?,?)',
+            [
+                this.title, 
+                this.category, 
+                this.priority, 
+                this.date, 
+                this.status, 
+                this.description
+            ]
+        )
     }
 
-    static fetchAll(callback){
-        fs.readFile(filePath, 'utf8', (err, data)=>{
-            let callbackData;
-            if(err){
-                console.log('Error reading file, resetting file: ', err);
-                return callback([]);
-            }else{
-                try{
-                    callbackData = data ? JSON.parse(data) : [];
-                }catch{
-                    console.log('Invalid Json');
-                    return callback([]);
-                }
-            }
-            callback(callbackData);
-        })
+    static fetchAll(){
+        return db.execute('SELECT * FROM tasks');
     }
 
-    static filterByStatus(status, callback){
-        let reqtasks = [];
-        Task.fetchAll((alltasks)=>{
-            console.log("All Tasks: ",alltasks);
-            for(let i =0; i< alltasks.length; i++){
-                if(String(alltasks[i].status) === status){
-                    reqtasks.push(alltasks[i]);
-                }
-            }
-            callback(reqtasks);
-        })
+    static filterByStatus(status){
+        return db.execute('SELECT * FROM tasks WHERE status = ?', [status])
+    }
+    static filterById(id){
+        return db.execute('SELECT * FROM tasks WHERE id = ?', [id])
+    }
+    static delTaskById(id){
+        return db.execute('DELETE FROM tasks WHERE id = ?', [id]);
+    }
+    static update(id){
+        const status = 'completed';
+        return db.execute('UPDATE tasks SET status = ? WHERE id = ?',[status, id]);
+    }
+    static updateById(id, title, category, priority, date, status, description) {
+        return db.execute(
+            'UPDATE tasks SET title = ?, category = ?, priority = ?, date = ?, status = ?, description = ? WHERE id = ?',
+            [title, category, priority, date, status, description, id]
+        );
     }
 }

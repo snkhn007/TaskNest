@@ -93,6 +93,7 @@
 }
 
 .btn {
+    /* width: 50px; */
     border: none;
     padding: 6px 10px;
     margin: 2px;
@@ -100,7 +101,7 @@
     cursor: pointer;
     font-size: 14px;
     background-color: #eee;
-    width: 30%;
+    /* width: 30%; */
 }
 
 .btn:hover {

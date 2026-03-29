@@ -6,29 +6,33 @@
     <%- include('partials/title')%>
     <link rel="stylesheet" href="/css/utils.css">
     <link rel="stylesheet" href="/css/create.css">
+
 </head>
 <body>
     <%- include('partials/nav')%>
     <main>
         <div id="heading">
-            <h3>Plan Your Task</h3>
+            <h3><%= editing ? 'Edit' : 'Plan' %> Your Task</h3>
         </div>
         <div id="description">
-            <p id="text">Fill in the details below to organize and manage your task efficiently.</p>
+            <p id="text"><%= editing ? 'Edit in the details below to organize and manage your task efficiently' : 'Fill in the details below to organize and manage your task efficiently' %></p>
         </div>
 
 
-        <form id="myForm" action="/submit" method="post">
+        <!-- <form id="myForm" action="/submit" method="post"> -->
+        <form id="myForm" action="<%= editing ? '/updateTask/' + taskVal.id : '/submit' %>" method="POST">
             <div class="form-group">
-                <label for="title">Task Title</label>
-                <input type="text" id="title" name="title" placeholder="Enter task title">
+                <label for="title" >Task Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter task title"
+                value = "<%= editing ? taskVal.title : '' %>">
                 <p id="errTxtTitle" class="errTxt">Task title is required</p>
             </div>
             
             <div class="form-row">
                 <div class="form-group">
                     <label for="category">Category / Subject</label>
-                    <input type="text" id="category" name="category" placeholder="e.g. Study, Work, Personal">
+                    <input type="text" id="category" name="category" placeholder="e.g. Study, Work, Personal"
+                    value = "<%= editing ? taskVal.category : '' %>">
                     <p id="errTxtCategory" class="errTxt">Please enter a category</p>
                 </div>
                 
@@ -47,7 +51,7 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="date">Due Date</label>
-                    <input type="date" name="date" id="date">
+                    <input type="date" name="date" id="date" >
                     <p id="errTxtDate" class="errTxt">Please choose a due date</p>
                 </div>
                 
@@ -65,13 +69,14 @@
             
             <div class="form-group">
                 <label for="pageDescription">Description</label>
-                <textarea name="description" id="pageDescription" rows="5" placeholder="Write a short description about the task.."></textarea>
-                <p id="errTxtDes" class="errTxt">Description is required</p>
+                <textarea name="description" id="pageDescription" rows="5" 
+                placeholder="Write a short description about the task..">
+                <%= editing ? taskVal.description : '' %></textarea>
             </div>
 
             <div class="form-actions">
                 <button type="submit" class="btn">
-                    Add Task
+                    <%= editing ? 'Save Edits' : 'Add Task' %>
                 </button>
             </div>
         </form>

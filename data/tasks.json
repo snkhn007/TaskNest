@@ -1,82 +1,50 @@
 [
   {
-    "title": "Complete Express Basics",
-    "category": "Study",
-    "priority": "medium",
-    "date": "2026-03-31",
-    "status": "pending",
-    "description": "Finish validation, streams, cookies, and middleware concepts."
-  },
-  {
-    "title": "Learn MongoDB CRUD",
-    "category": "Study",
-    "priority": "high",
-    "date": "2026-04-02",
-    "status": "in-progress",
-    "description": "Practice create, read, update, delete operations with Node.js."
-  },
-  {
-    "title": "Implement TaskNest Filters",
+    "title": "Finish Node.js MVC Refactor",
     "category": "Project",
     "priority": "high",
-    "date": "2026-04-01",
-    "status": "pending",
-    "description": "Add filtering for pending, completed, and overdue tasks."
-  },
-  {
-    "title": "Setup EJS Partials",
-    "category": "Study",
-    "priority": "medium",
-    "date": "2026-03-30",
-    "status": "completed",
-    "description": "Create reusable header, footer, and layout partials."
-  },
-  {
-    "title": "LeetCode Practice - Arrays",
-    "category": "DSA",
-    "priority": "low",
-    "date": "2026-04-03",
-    "status": "pending",
-    "description": "Solve 2-3 array-based problems."
-  },
-  {
-    "title": "Fix TaskNest Bugs",
-    "category": "Project",
-    "priority": "high",
-    "date": "2026-03-29",
-    "status": "in-progress",
-    "description": "Debug filtering and rendering issues in task board."
-  },
-  {
-    "title": "UI Styling Improvements",
-    "category": "Project",
-    "priority": "low",
     "date": "2026-04-05",
-    "status": "pending",
-    "description": "Improve layout, spacing, and responsiveness."
+    "status": "in-progress",
+    "description": "Move remaining logic into controllers and clean up routing structure."
   },
   {
-    "title": "Review Java Concepts",
+    "title": "Prepare DSA Notes",
     "category": "Study",
     "priority": "medium",
-    "date": "2026-04-04",
-    "status": "completed",
-    "description": "Revise OOPs, interfaces, and inner classes."
-  },
-  {
-    "title": "Prepare Resume Update",
-    "category": "Career",
-    "priority": "high",
     "date": "2026-04-06",
     "status": "pending",
-    "description": "Add TaskNest project and GitHub links."
+    "description": "Revise arrays, hashing, and sliding window patterns."
   },
   {
-    "title": "Test Overdue Logic",
+    "title": "Update Resume with TaskNest",
+    "category": "Career",
+    "priority": "high",
+    "date": "2026-04-07",
+    "status": "pending",
+    "description": "Add project description, GitHub link, and tech stack."
+  },
+  {
+    "title": "Fix UI Bugs in Task Board",
     "category": "Project",
     "priority": "medium",
-    "date": "2026-03-20",
+    "date": "2026-04-04",
+    "status": "in-progress",
+    "description": "Resolve card alignment issues and button styling inconsistencies."
+  },
+  {
+    "title": "Practice SQL Queries",
+    "category": "Study",
+    "priority": "low",
+    "date": "2026-04-08",
     "status": "pending",
-    "description": "Ensure tasks with past dates are marked overdue."
+    "description": "Write basic SELECT, JOIN, and GROUP BY queries."
+  },
+  {
+    "title": "Complete EJS Dynamic Rendering",
+    "category": "Project",
+    "priority": "high",
+    "date": "2026-04-03",
+    "status": "completed",
+    "description": "Successfully render tasks dynamically with status-based filtering."
   }
 ]
